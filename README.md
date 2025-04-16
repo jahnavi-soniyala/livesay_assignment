@@ -143,9 +143,9 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact:
-  Name: Jahnavi Sonayala
-  LinkedIn: https://www.linkedin.com/in/jahnavi-sonayala/
-  Email: jahnavi10282@gmail.com
+  - Jahnavi Sonayala
+  -https://www.linkedin.com/in/jahnavi-sonayala/
+  -Email: jahnavi10282@gmail.com
 
 
 ---
