@@ -51,32 +51,6 @@ It uses Spring Boot for backend development and Spring Data JPA for database int
 
 ---
 
-## Project Structure
-src/
-└── main/
-    └── java/
-        └── com/
-            └── assignment/
-                    ├── controller/
-                    │   ├── LoadController.java
-                    │   └── BookingController.java
-                    ├── model/
-                    │   ├── Load.java
-                    |   ├── LoadStatus.java
-                    │   ├── Booking.java
-                    │   └── BookingStatus.java
-                    │       
-                    │        
-                    ├── repository/
-                    │   ├── LoadRepository.java
-                    │   └── BookingRepository.java
-                    └── service/
-                        ├── LoadService.java
-                        └── BookingService.java
-
-
----
-
 ## Installation
 
 ### Prerequisites
@@ -111,8 +85,21 @@ Example:
 ```bash
 curl -X POST http://localhost:8080/load \
 -H "Content-Type: application/json" \
--d '{"shipperId": "SHIP123", "loadingPoint": "Delhi", "unloadingPoint": "Mumbai", ...}'
+-d '{
+  "shipperId": "SHIP123",
+  "loadingPoint": "Pune",
+  "unloadingPoint": "Chennai",
+  "loadingDate": "2025-04-17T08:00:00",
+  "unloadingDate": "2025-04-18T18:00:00",
+  "productType": "Machinery",
+  "truckType": "Open",
+  "noOfTrucks": 5,
+  "weight": 25000,
+  "comment": "Heavy equipment"
+}
+'
 ```
+---
 API Endpoints
 Load Endpoints
 Groups:
@@ -137,17 +124,14 @@ Groups:
       - [DELETE, /booking/{id}, Delete a booking]
       - [PUT, /booking/accept/{id}, Accept a booking (status: ACCEPTED)]
 
-
-
-License
+---
+##License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact:
+---
+##Contact:
   - Jahnavi Sonayala
+  - -Email: jahnavi10282@gmail.com
   -https://www.linkedin.com/in/jahnavi-sonayala/
-  -Email: jahnavi10282@gmail.com
-
-
 ---
 
 Let me know if you want me to:
