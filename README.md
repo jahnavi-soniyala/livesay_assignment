@@ -142,10 +142,10 @@ Groups:
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact\n
-Jahnavi Sonayala\n
-https://www.linkedin.com/in/jahnavi-sonayala/ 
-\nEmail: jahnavi10282gmail.com
+Contact:
+  Name: Jahnavi Sonayala
+  LinkedIn: https://www.linkedin.com/in/jahnavi-sonayala/
+  Email: jahnavi10282@gmail.com
 
 
 ---
