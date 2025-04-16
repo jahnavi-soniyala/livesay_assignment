@@ -115,67 +115,28 @@ curl -X POST http://localhost:8080/load \
 ```
 API Endpoints
 Load Endpoints
-load_endpoints:
-  - method: POST
-    endpoint: /load
-    description: Create a new load
+Groups:
+ - Name: LoadEndpoints
+    Method, Endpoint, Description:
+      - [POST, /load, Create a new load]
+      - [GET, /load, Get all loads]
+      - [GET, /load/{id}, Get a load by ID]
+      - [GET, /load?shipperId=x, Get loads by shipper ID]
+      - [GET, /load?truckType=x, Get loads by truck type]
+      - [PUT, /load/{id}, Update a load]
+      - [DELETE, /load/{id}, Delete a load]
 
-  - method: GET
-    endpoint: /load
-    description: Get all loads
+ - Name: BookingEndpoints
+    Method, Endpoint, Description:
+      - [POST, /booking, Create a booking]
+      - [GET, /booking, Get all bookings]
+      - [GET, /booking/{id}, Get a booking by ID]
+      - [GET, /booking?transporterId=x, Get bookings by transporter ID]
+      - [GET, /booking?loadId=x, Get bookings by load ID]
+      - [PUT, /booking/{id}, Update a booking]
+      - [DELETE, /booking/{id}, Delete a booking]
+      - [PUT, /booking/accept/{id}, Accept a booking (status: ACCEPTED)]
 
-  - method: GET
-    endpoint: /load/{id}
-    description: Get a load by ID
-
-  - method: GET
-    endpoint: /load?shipperId=x
-    description: Get loads by shipper ID
-
-  - method: GET
-    endpoint: /load?truckType=x
-    description: Get loads by truck type
-
-  - method: PUT
-    endpoint: /load/{id}
-    description: Update a load
-
-  - method: DELETE
-    endpoint: /load/{id}
-    description: Delete a load
-
-booking_endpoints:
-  - method: POST
-    endpoint: /booking
-    description: Create a booking
-
-  - method: GET
-    endpoint: /booking
-    description: Get all bookings
-
-  - method: GET
-    endpoint: /booking/{id}
-    description: Get a booking by ID
-
-  - method: GET
-    endpoint: /booking?transporterId=x
-    description: Get bookings by transporter ID
-
-  - method: GET
-    endpoint: /booking?loadId=x
-    description: Get bookings by load ID
-
-  - method: PUT
-    endpoint: /booking/{id}
-    description: Update a booking
-
-  - method: DELETE
-    endpoint: /booking/{id}
-    description: Delete a booking
-
-  - method: PUT
-    endpoint: /booking/accept/{id}
-    description: Accept a booking (status: ACCEPTED)
 
 
 License
