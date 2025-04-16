@@ -68,9 +68,9 @@ cd livesay_assignment
 2. Update application.properties:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/liveasy
-spring.datasource.username=postgres
-spring.datasource.password=123456789
+spring.datasource.url=jdbc:postgresql://localhost:5432/database-name
+spring.datasource.username="username"
+spring.datasource.password="password"
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
