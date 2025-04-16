@@ -89,16 +89,21 @@ curl -X POST http://localhost:8080/load \
 -H "Content-Type: application/json" \
 -d '{
   "shipperId": "SHIP123",
-  "loadingPoint": "Pune",
-  "unloadingPoint": "Chennai",
-  "loadingDate": "2025-04-17T08:00:00",
-  "unloadingDate": "2025-04-18T18:00:00",
-  "productType": "Machinery",
-  "truckType": "Open",
-  "noOfTrucks": 5,
-  "weight": 25000,
-  "comment": "Heavy equipment"
+  "facility": {
+    "loadingPoint": "Location A",
+    "unloadingPoint": "Location B",
+    "loadingDate": "2025-04-20T10:00:00",
+    "unloadingDate": "2025-04-20T15:00:00"
+  },
+  "productType": "Electronics",
+  "truckType": "Flatbed",
+  "noOfTrucks": 2,
+  "weight": 1500.5,
+  "comment": "Handle with care",
+  "datePosted": "2025-04-16T12:00:00",
+  "status": "POSTED"
 }
+
 '
 ```
 ---
