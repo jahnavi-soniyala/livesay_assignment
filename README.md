@@ -14,6 +14,7 @@
 - [API Endpoints](#api-endpoints)
 - [License](#license)
 - [Contact](#contact)
+- [Validation & Error Handling](#validation-and-error-handling)
 
 ---
 
@@ -33,9 +34,12 @@ It uses Spring Boot for backend development and Spring Data JPA for database int
 - Create, read, update, delete (CRUD) for **Loads**
 - Create and manage **Bookings**
 - Manage **Load** and **Booking** statuses (`POSTED`, `BOOKED`, `CANCELLED`, etc.)
-- RESTful API structure
+- RESTful API structure with validation
 - UUID-based entity identification
-- Enum-based status transitions
+- Enum-based status transitions for Load and Booking status
+- Robust global exception handling with structured error responses
+- Request DTOs for clean data separation and input validation
+- Centralized validation error messages
 
 ---
 
@@ -79,6 +83,26 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 3. Build and run the application:
 ```bash
 mvn spring-boot:run
+```
+## Validation and Error Handling
+
+- All request bodies are validated using `jakarta.validation` annotations.
+- Detailed error messages are returned for invalid input.
+- Errors are wrapped in consistent JSON responses via a global exception handler.
+
+**Example Validation Error Response:**
+
+```json
+{
+  "timestamp": "2025-04-16T16:40:21.000",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Validation failed",
+  "errors": {
+    "transporterId": "Transporter ID is required",
+    "proposedRate": "Proposed rate must be a positive number"
+  }
+}
 ```
 ## Usage
 You can use Postman or cURL to test the endpoints.
