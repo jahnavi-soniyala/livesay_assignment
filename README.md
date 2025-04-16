@@ -9,7 +9,6 @@
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
@@ -42,7 +41,7 @@ It uses Spring Boot for backend development and Spring Data JPA for database int
 
 ## Tech Stack
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot**
 - **Spring Data JPA**
 - **Lombok**
@@ -69,16 +68,19 @@ cd livesay_assignment
 2. Update application.properties:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:postgresql://localhost:5432/liveasy
+spring.datasource.username=postgres
+spring.datasource.password=123456789
+spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ```
 3. Build and run the application:
 ```bash
 mvn spring-boot:run
 ```
-Usage
+## Usage
 You can use Postman or cURL to test the endpoints.
 
 Example:
@@ -100,8 +102,7 @@ curl -X POST http://localhost:8080/load \
 '
 ```
 ---
-API Endpoints
-Load Endpoints
+## API Endpoints
 Groups:
  - Name: LoadEndpoints
     Method, Endpoint, Description:
@@ -133,10 +134,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
   - Email: jahnavi10282@gmail.com
   - https://www.linkedin.com/in/jahnavi-sonayala/
 ---
-
-Let me know if you want me to:
-- Export this as a `README.md` file  
-- Add badges (build, license, etc.)  
-- Include example screenshots or Swagger integration  
-
-Would you like me to generate the file for download?
