@@ -125,13 +125,13 @@ Groups:
       - [PUT, /booking/accept/{id}, Accept a booking (status: ACCEPTED)]
 
 ---
-##License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ---
-##Contact:
+## Contact:
   - Jahnavi Sonayala
-  - -Email: jahnavi10282@gmail.com
-  -https://www.linkedin.com/in/jahnavi-sonayala/
+  - Email: jahnavi10282@gmail.com
+  - https://www.linkedin.com/in/jahnavi-sonayala/
 ---
 
 Let me know if you want me to:
