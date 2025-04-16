@@ -181,10 +181,10 @@ booking_endpoints:
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-Jahnavi Sonayala
-https://www.linkedin.com/in/jahnavi-sonayala/
-Email: jahnavi10282gmail.com
+Contact\n
+Jahnavi Sonayala\n
+https://www.linkedin.com/in/jahnavi-sonayala/ 
+\nEmail: jahnavi10282gmail.com
 
 
 ---
